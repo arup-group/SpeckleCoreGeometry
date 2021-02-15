@@ -58,7 +58,7 @@ jobs:
       run: msbuild SpeckleCoreGeometry.sln /p:platform="Any CPU" /p:configuration="Release" /p:VisualStudioVersion="16.0" /restore
         
     - name: zip
-      run: 7z a SpeckleCoreGeometry.zip -r ".\SpeckleCoreGeometry\bin\Release\Release\*"
+      run: 7z a SpeckleCoreGeometry.zip -r ".\SpeckleCoreGeometry\bin\Release\*"
         
     - name: Upload Windows executable
       if: github.ref == 'refs/heads/master' 
