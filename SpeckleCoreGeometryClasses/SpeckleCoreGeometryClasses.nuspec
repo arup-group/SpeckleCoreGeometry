@@ -1,21 +1,20 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>SpeckleCoreGeometry</id>
+    <id>SpecCxCoreGeometry</id>
     <version>$version$</version>
     <title>$title$</title>
-    <authors>Speckle</authors>
+    <authors>SpecCx</authors>
     <owners>$author$</owners>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/speckleworks/SpeckleCoreGeometry</projectUrl>
-    <iconUrl>https://avatars2.githubusercontent.com/u/31284874</iconUrl>
+    <projectUrl>https://github.com/arup-group/SpeckleCoreGeometry</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A set of core geometry classes for Speckle.</description>
+    <description>A set of core geometry classes.</description>
     <releaseNotes></releaseNotes>
     <copyright>$copyright$</copyright>
-    <tags>speckle core geometry</tags>
+    <tags>cx core geometry</tags>
     <dependencies>
-      <dependency id="SpeckleCore" version="1.6.17" />
+      <dependency id="SpecCxCore" version="1.2.1" />
       <dependency id="Newtonsoft.Json" version="12.0.2" />
     </dependencies>
   </metadata>
