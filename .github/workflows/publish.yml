@@ -71,3 +71,9 @@ jobs:
         asset_path: ./SpeckleCoreGeometry.zip
         asset_name: SpeckleCoreGeometry-${{ needs.createRelease.outputs.version }}.zip
         asset_content_type: application/vnd.microsoft.portable-executable
+
+    - name: Generate NuGet package
+      run: nuget pack SpeckleCoreGeometryClasses/SpeckleCoreGeometryClasses.csproj -Version ${{ steps.version.outputs.version }} -Verbosity detailed -Properties Configuration=Release -IncludeReferencedProjects
+      
+    - name: Push generated package to GitHub registry
+      run: nuget push *.nupkg -SkipDuplicate -ApiKey ${{ secrets.SPECKLE_NUGET_AUTH_TOKEN }} -Source https://api.nuget.org/v3/index.json     
